@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Friend Finder Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
  
 
-    <!-- Link to the jQuery Library -->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      
+      <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- Link to icons -->
+    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
 
 
     <!-- Compiled and minified Materialize CSS -->
@@ -20,6 +23,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- <link rel="stylesheet" href="javascript.js"> -->
+
 
 
 </head>
@@ -160,7 +166,36 @@
             </div>                        
   
                     
-    </main>
+ </main>
 
+<div id="modal1" class="modal">
+
+  <div class="modal-content">
+
+    <h4> Friend Match</h4>
+
+    <div class="divider"></div>
+
+    <h5 id="friendMatch"></h5>
+
+    <img id="friendImage" class="materialboxed" width="650" src="">
+
+  </div>
+
+  <div class="modal-footer">
+
+    <a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+
+  </div>
+
+</div>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="javascript.js"></script>
 
 </body>
+
+</html>

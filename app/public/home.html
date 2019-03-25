@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="server.js"></script>
-    <script src="server.js"></script>
+    <!-- <script src="server.js"></script>
+    <script src="server.js"></script> -->
+
 
     <!-- Link to the jQuery Library -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      
+
+    <!-- Link to icons -->
+    <script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+
     <!-- Compiled and minified Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     
@@ -19,6 +23,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="javascript.js">
+
 
 
 </head>
@@ -29,8 +36,8 @@
                 <div class="nav-wrapper green accent-4">
                     <i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
                     <ul class="right hide-on-med-and-down" id="head-nav-links">
-                        <li><a href="/survey">Survey</a></li>
-                        <li><a href="/api/friends">API Friends List</a></li>
+                        <li><a href="/survey.html">Survey</a></li>
+                        <li><a href="/api/friends.js">API Friends List</a></li>
                     </ul>
                 </div>
             </nav>
@@ -45,11 +52,11 @@
                         </div>
                             <div class="divider"></div>
                             <div class="maintext">
-                                <h3>Answer a few basic questions.</h3>
+                                <h3>Take our short, personality based survey.</h3>
                                 <br>
-                                <h3>Find the friend with the greatest compatibility!</h3>
+                                <h3>Get matched with a friend with the best compatability</h3>
                             </div>
-                            <a href="/survey">
+                            <a href="/survey.html">
                                 <button class="btn waves-effect waves-light" type="submit" name="action">Go to Survey
                                 
                                 </button>
@@ -60,7 +67,30 @@
             </div>
         </main>
 
-            
+        <footer class="page-footer grey accent-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h5 class="white-text">Friend Finder App</h5>
+                            <p class="grey-text text-lighten-4">Thank you for using our application.</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Links</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="/api/friends.js">API Friends List</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://github.com/bbanderson84/FriendsFinder">GitHub Repo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div id="build">
+                        Build 1.0.0 / Version A
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
 
     
