@@ -1,54 +1,71 @@
-//LOAD DATA
-//Linking routes to data sources
+// Import the list of friend entries
+var friendInfo = require('../data/friends.js');
+// Export API routes
+module.exports = function (app) {
 
-var friendsArr = require("../data/friends.js");
+	app.get('/api/friends', function(req, res){
 
-module.exports = function(app){
-    //API GET requests - below code handles when users visit a page
+		res.json(friendInfo);
+	})
 
-    app.get("/api/friends", function(req, res) {
+    // Add new friend entry
+	app.post('/api/friends', function(req, res){
+        
+        var newFriend = req.body;
+        
+       
+		for(var i = 0; i < newFriend.scores.length; i++) {
 
-        res.json(friendsArr);
+			if(newFriend.scores[i] == "1 (Strongly Disagree)") {
 
-    });
-
-    app.post("/api/friends", function (req, res) {
-
-        var userInput = req.body;
-
-        var userAnswers = userInput.scores;
-
-        var matchName = "";
-
-        var matchImage = '';
-
-        var setDifference = 2000;
-
-        for (var i = 0; i < friendsArr.length; i++) {
-
-            var difference = 0;
-
-            for (var a = 0; a < userAnswers.length; a++) {
-                difference += Math.abs(friendsArr[i].scores[a] - userAnswers[a]);
-
-            }
-
-            if (difference < setDifference ) {
+                newFriend.scores[i] = 1;
                 
-                setDifference = difference;
+			} else if(newFriend.scores[i] == "5 (Strongly Agree)") {
 
-                matchName = friendsArr[i].name;
+                newFriend.scores[i] = 5;
+                
+			} else {
+				newFriend.scores[i] = parseInt(newFriend.scores[i]);
+			}
+		}
 
-                matchImage = friendsArr[i].photo;
-            }
+        var differencesArray = [];
+        // console.log(differencesArray);
 
-        }
+		for (var i = 0; i < friendInfo.length; i++) {
 
-        friendsArr.push(userInput);
+            var comparedFriend = friendInfo[i];
+            
+			var totalDifference = 0;
+			
+			for (var k = 0; k < comparedFriend.scores.length; k++) {
 
-        res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
+                var differenceOneScore = Math.abs(comparedFriend.scores[k] - newFriend.scores[k]);
+                
+				totalDifference += differenceOneScore;
+			}
 
+			differencesArray[i] = totalDifference;
+		}
 
+        var bestFriendNum = differencesArray[0];
+        
+		var bestFriendIndex = 0;
 
-    });
-};
+		for(var i = 1; i < differencesArray.length; i++) {
+
+			if(differencesArray[i] < bestFriendNum) {
+
+                bestFriendNum = differencesArray[i];
+                
+				bestFriendIndex = i;
+			}
+		}
+    
+        // Add new user
+		friendInfo.push(newFriend);
+
+        // Send appropriate response
+		res.json(friendInfo[bestFriendIndex]);
+	})
+}

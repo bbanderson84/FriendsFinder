@@ -1,0 +1,26 @@
+{
+  "name": "FriendsFinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "json": "^9.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbanderson84/FriendsFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbanderson84/FriendsFinder/issues"
+  },
+  "homepage": "https://github.com/bbanderson84/FriendsFinder#readme"
+}

@@ -41,11 +41,52 @@ main h1 {
     text-align: center;
 }
 
+#matchTitle {
+    text-align: center;
+
+}
+
+#retryButton {
+    margin-top: 300px;
+}
+
+#bestFriendModal {
+	text-align: center;
+}
+
+#bestFriendPhoto {
+	max-width: 100%;
+	height: auto;
+}
+
+#bestFriend {
+    text-align: center;
+}
+
+#fName {
+    text-align: center;
+    margin-left: 20px;
+}
+
+
 #head-nav-links {
     margin-right: 50px;
     margin-top: 20px;
     background-color: lightgray;
 }
+
+#modalMatch {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
 
 .mainpanel{
    margin: 50px;
