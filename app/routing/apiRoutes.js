@@ -16,7 +16,7 @@ module.exports = function (app) {
        
 		for(var i = 0; i < newFriend.scores.length; i++) {
 
-			if(newFriend.scores[i] == "1 (Strongly Disagree)") {
+			if (newFriend.scores[i] == "1 (Strongly Disagree)") {
 
                 newFriend.scores[i] = 1;
                 

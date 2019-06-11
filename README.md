@@ -9,4 +9,11 @@
 ## DEMO
 ### Friend Finder is deployed on Heroku. You can find it here: <https://friend-finder-brandons-version.herokuapp.com/> 
 
+## FUNCTIONALITY
+
+![Alt text](/screenshots/Server.png?raw=true "Server File")
+
+![Alt text](/screenshots/ApiRoutes.png?raw=true "API Routes File")
+
+
 
